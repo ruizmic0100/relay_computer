@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 struct Relay {
   int pin;
   volatile byte relayState;
@@ -367,9 +369,9 @@ void setup() {
   Serial.begin(9600);
 
   // boot sequence that turns relays on and off for functionality verification purposes
-  turn_off_all_relays();
-  delay(1000);
-  turn_on_all_relays_staggered(COMMANDED_CLOCK_SPEED_MS);
+  // turn_off_all_relays();
+  // delay(1000);
+  // turn_on_all_relays_staggered(COMMANDED_CLOCK_SPEED_MS);
   //digitalWrite(r20.pin, LOW);
 
 
